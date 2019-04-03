@@ -1,0 +1,15 @@
+{
+  "name": "x_rotating_card_v1.4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nabdAr.js",
+  "scripts": {
+    "build": "babel nabdAr.js -d build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

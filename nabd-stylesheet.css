@@ -1,0 +1,434 @@
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    outline: 0 !important;
+}
+/* entire container, keeps perspective */
+.card-container{
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin-bottom: 30px;
+}
+.page{
+
+}
+
+.hideTitle{
+    visibility:hidden ;
+}
+
+
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.card {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+.btnClass{
+    margin-left: 400px;
+    width: auto;
+    float: left;
+}
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+.allign-cs{
+    display:block;
+    position: absolute;
+    left: 80px;
+    bottom: 2px;
+}
+
+.allign-cs i{
+padding: 2.5px;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+
+#loading {
+    width: 5%;
+    height: 5%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
+}
+
+#loading-image {
+    position: absolute;
+    top: 300px;
+    left:700px;
+    z-index: 100;
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    z-index: 3;
+}
+
+/*        Style       */
+
+
+.card{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+.card-container, .front, .back {
+    width: 100%;
+    height: 350px;
+    border-radius: 4px;
+}
+.card .cover{
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+.card .cover img{
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item {
+    height: 200px;
+}
+
+.card .content{
+    padding: 10px 20px 20px;
+}
+
+.card .content .main {
+    min-height: 160px;
+}
+
+.card .name {
+    line-height: 28px;
+    margin: 10px 0 0;
+}
+
+.card h5{
+    margin: 5px 0;
+    line-height: 20px;
+}
+.card .profession{
+    margin-bottom: 20px;
+}
+
+.card .footer {
+    margin:-100px 0 0;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.card .footer .social-links{
+}
+.card .footer .social-links a{
+    margin: 0 7px;
+}
+
+.social-links a{
+    padding: 60px 0 0;
+}
+.card .footer .btn-simple{
+    margin-top: -6px;
+}
+.card .header {
+    padding: 5px 20px;
+}
+.card .qu-backtitle{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.card .stats-container{
+    width: 100%;
+    margin-top: 50px;
+}
+.card .stats{
+    width: 33.333333%;
+}
+
+.card .stats:first-child{
+    border-right: 1px solid #EEEEEE;
+}
+.card .stats:last-child{
+    border-left: 1px solid #EEEEEE;
+}
+.card .stats h4{
+
+    margin-bottom: 5px;
+}
+.card .stats p{
+    color: #777777;
+}
+/*      Just for presentation        */
+
+.space-30{
+    height: 30px;
+    display: block;
+}
+.space-50{
+    height: 50px;
+    display: block;
+}
+.space-200{
+    height: 200px;
+    display: block;
+}
+.white-board{
+    background-color: #FFFFFF;
+    min-height: 200px;
+    padding: 60px 60px 20px;
+}
+.ct-heart{
+    color: #F74933;
+}
+
+pre.prettyprint{
+    background-color: #ffffff;
+    border: 1px solid #999;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+}
+.atv, .str{
+    color: #05AE0E;
+}
+.tag, .pln, .kwd{
+    color: #3472F7;
+}
+.atn{
+    color: #2C93FF;
+}
+.pln{
+    color: #333;
+}
+.com{
+    color: #999;
+}
+
+.btn-simple{
+    opacity: .8;
+    color: #666666;
+    background-color: transparent;
+}
+
+.btn-simple:hover,
+.btn-simple:focus{
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+}
+.btn-simple i{
+
+}
+
+.navbar-brand-logo{
+    padding: 0;
+}
+
+
+.navbar-brand-logo .logo{
+    border: 1px solid #333333;
+    border-radius: 50%;
+    float: left;
+    overflow: hidden;
+    width: 60px;
+}
+.navbar .navbar-brand-logo .brand{
+    color: #FFFFFF;
+    float: left;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60px;
+}
+.navbar-default .navbar-brand-logo .brand{
+    color: #555;
+}
+
+ul.share-buttons{
+    list-style: none;
+    padding: 0;
+}
+
+ul.share-buttons li{
+    display: inline;
+}
+
+ul.share-buttons .sr-only{
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+ul.share-buttons img{
+    width: 24px;
+}
+
+
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back {
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92, .01, .83, .67);
+    }
+
+    .front {
+        z-index: 4;
+    }
+
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back {
+        z-index: 5;
+        visibility: visible;
+    }
+}
+
+
+
+@media all and (min-width: 2500px) {
+    /* screen size until 1200px */
+    .mainContent {
+        font-size: 1.5em !important; /* 1.5x default size */
+    }
+}
+
+    @media all and (min-width: 1500px) {
+        /* screen size until 1200px */
+        .mainContent{
+            font-size: 1.1em !important; /* 1.5x default size */
+        }
+        .btnClass{
+            margin-left: 350px;
+            width: auto;
+            float: left;
+        }
+    }
+    @media all and (min-width: 1200px) {
+        /* screen size until 1200px */
+
+        .mainContent{
+            font-size: 1em !important; /* 1.5x default size */
+        }
+
+        .btnClass{
+            margin-left: 350px;
+            width: auto;
+            float: left;
+        }
+
+    }
+
+@media all and (max-width: 1200px) {
+    /* screen size until 1000px */
+
+    .mainContent{
+        font-size: 0.9em !important; /* 1.5x default size */
+    }
+    .btnClass{
+        margin-left: 350px;
+        width: auto;
+        float: left;
+    }
+}
+    @media all and (max-width: 1000px) {
+        /* screen size until 1000px */
+
+        .mainContent{
+            font-size: 0.6em !important; /* 1.5x default size */
+        }
+        .btnClass{
+            margin-left: 350px;
+            width: auto;
+            float: left;
+        }
+        .hideTitle {
+            visibility: visible;
+        }
+    }
+
+
+    @media all and (max-width: 500px) {
+        /* screen size until 500px */
+        .mainContent{
+            font-size: 1em !important; /* 0.8x default size */
+        }
+        .btnClass{
+            margin-left: 120px;
+        }
+        .hideTitle {
+            visibility: visible;
+        }
+    }
+
+
+
+
+
+
